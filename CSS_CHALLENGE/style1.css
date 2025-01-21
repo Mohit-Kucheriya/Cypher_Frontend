@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Questrial", sans-serif; */
+  font-weight: 400;
+}
+
+.container {
+  width: clamp(300px, 90%, 1200px);
+  margin: 100px auto;
+  padding: clamp(1rem, 1vw, 2rem);
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(1rem, 1vw, 2rem);
+  flex-wrap: wrap;
+}
+
+.responsive-content {
+  flex: 1;
+}
+
+.responsive-container {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: clamp(1rem, 1.5vw, 2rem);
+}
+
+.responsive-container .item {
+  grid-column: 1 / -1;
+  padding: clamp(1rem, 1vw, 2rem) 0;
+}
+
+.responsive-container .item-1 {
+  font-size: clamp(1rem, 1.1vw, 1.5rem);
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #51cf66;
+  color: #000;
+}
+
+.responsive-container .item-2 {
+  color: #868e96;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  margin-bottom: clamp(0.8rem, 2.5vw, 1rem);
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.responsive-item p {
+  font-size: clamp(1rem, 1.5vw, 1rem);
+  font-weight: 600;
+  margin-bottom: clamp(0.8rem, 2.5vw, 1rem);
+}
+
+button {
+  padding: clamp(0.8rem, 1.5vw, 0.8rem) clamp(1rem, 2.5vw, 1.5rem);
+  cursor: pointer;
+  font-size: 1rem;
+  border: 1px solid #51cf66;
+  background-color: #fff;
+  outline: none;
+  font-family: inherit;
+  border-radius: 100px;
+  font-weight: 500;
+}
